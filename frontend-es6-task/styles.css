@@ -1,17 +1,23 @@
 body {
+  background-image: url("images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: Arial, sans-serif;
-  background-color: #f4f6f8;
   margin: 0;
   padding: 0;
 }
 
 .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
   max-width: 800px;
   margin: 2rem auto;
   padding: 1rem;
 }
 
 h1 {
+  font-size: 2rem;
   text-align: center;
   color: #222;
 }
@@ -20,6 +26,7 @@ h1 {
   text-align: center;
   color: #555;
   margin-bottom: 2rem;
+  font-size: 1.2em;
 }
 
 .card {
@@ -28,6 +35,7 @@ h1 {
   margin-bottom: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
 }
 
 .card h2 {
