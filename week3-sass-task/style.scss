@@ -1,0 +1,112 @@
+$primary-color: #007bff;
+$primary-hover: #0056b3;
+$success-color: #28a745;
+$success-hover: #1e7e34;
+$text-color: #222;
+$subtitle-color: #555;
+$card-bg: white;
+$highlight-bg: #eaf4ff;
+$box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+$border-radius: 8px;
+$font-family: Arial, sans-serif;
+
+body {
+  background-image: url("images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+
+  @media (max-width: 600px) {
+    padding: 1rem;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: $text-color;
+
+  @media (max-width: 600px) {
+    font-size: 1.5rem;
+  }
+}
+
+.subtitle {
+  text-align: center;
+  color: $subtitle-color;
+  margin-bottom: 2rem;
+  font-size: 1.2em;
+}
+
+.card {
+  background: $card-bg;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+
+  h2 {
+    margin-top: 0;
+    color: #2c3e50;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 0.4rem 0;
+      border-bottom: 1px solid #eee;
+    }
+  }
+
+  &.highlight {
+    background: $highlight-bg;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: $primary-color;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+
+  &.reset {
+    background-color: $success-color;
+
+    &:hover {
+      background-color: $success-hover;
+    }
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}

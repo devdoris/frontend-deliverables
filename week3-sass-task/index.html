@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doris SASS & SCSS Implementation</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>DevDoris's JavaScript ES6 & Array Methods</h1>
+        <p class="subtitle">
+            Demonstration of ES6 syntax and array methods using real-world data
+        </p>
+
+        <section class="card">
+            <h2>🧩 Product Names (map)</h2>
+            <ul id="productNames"></ul>
+        </section>
+
+        <section class="card">
+            <h2>💰 Expensive Products (filter)</h2>
+            <ul id="expensiveProducts"></ul>
+        </section>
+
+        <section class="card highlight">
+            <h2>📊 Total Price (reduce)</h2>
+            <p id="totalPrice"></p>
+        </section>
+        <section class="card">
+            <h2>✂️ Remove Product (splice)</h2>
+            <p>Click a button to remove a product from the list.</p>
+
+            <div class="buttons">
+                <button onclick="removeProduct(0)">Remove Laptop</button>
+                <button onclick="removeProduct(1)">Remove Phone</button>
+                <button onclick="removeProduct(2)">Remove Tablet</button>
+                <button class="reset" onclick="resetProducts()">Reset Products</button>
+
+            </div>
+
+            <ul id="spliceOutput"></ul>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+
+</html>
