@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js & npm Implementation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Node.js & npm Implementation</h1>
+        <p>Demonstrating Practical Understanding</p>
+    </header>
+
+    <main>
+
+        <section class="card">
+            <h2>📘 What I Learned</h2>
+            <ul>
+                <li>Node.js allows JavaScript to run outside the browser.</li>
+                <li>npm is used to install and manage dependencies.</li>
+                <li>How to initialize a project using <strong>npm init</strong>.</li>
+                <li>How to install packages using <strong>npm install</strong>.</li>
+                <li>How to create and run a server using Express.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>⚙️ Implementation</h2>
+            <p>
+                This webpage is being served using a Node.js Express server.
+                The project was initialized using npm, and Express was installed
+                as a dependency to create the server.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>🛠 Tools Used</h2>
+            <ul>
+                <li>Node.js</li>
+                <li>npm</li>
+                <li>Express.js</li>
+                <li>VS Code</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Doris | Node.js Learning Project</p>
+    </footer>
+<script>
+    fetch("/api/message")
+        .then(res => res.json())
+        .then(data => {
+            const section = document.createElement("section");
+            section.className = "card";
+            section.innerHTML = `<h2>🌐 API Response</h2><p>${data.message}</p>`;
+            document.querySelector("main").appendChild(section);
+        })
+        .catch(err => console.error(err));
+</script>
+
+</body>
+
+</html>
