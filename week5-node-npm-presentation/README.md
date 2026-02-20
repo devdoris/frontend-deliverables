@@ -12,3 +12,14 @@ npm start
 - Express routing
 - Static file serving
 - REST API basics
+
+## Screenshots
+
+### Server Running
+![Server Running](screenshots/server-running.png)
+
+### Website Output
+![Website](screenshots/website.png)
+
+### API Response
+![API Response](screenshots/api-response.png)
