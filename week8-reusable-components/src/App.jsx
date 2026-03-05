@@ -1,35 +1,65 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import Button from "./components/Button";
+import Card from "./components/Card";
+import InputField from "./components/InputField";
+import Checkbox from "./components/Checkbox";
+import Table from "./components/Table";
+import Alert from "./components/Alert";
+import styled from "styled-components";
+
+const Container = styled.div`
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+`;
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [name, setName] = useState("");
+  const [accepted, setAccepted] = useState(false);
+
+  const tableData = [
+    { name: "Doris", course: "React" },
+    { name: "John", course: "JavaScript" },
+  ];
+
+  const handleSubmit = () => {
+    if (accepted && name) {
+      alert(`Hello ${name}, you are enrolled!`);
+    } else {
+      alert("Please enter your name and accept terms.");
+    }
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Container>
+      <h1>Week 8: Reusable Components</h1>
+
+      <Alert message="Welcome to Doris's reusable components!" />
+
+      <Card
+        title="Reusable Card"
+        description="This card can be used anywhere."
+      />
+
+      <InputField
+        placeholder="Enter your name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+
+      <Checkbox
+        label="Accept terms"
+        checked={accepted}
+        onChange={(e) => setAccepted(e.target.checked)}
+      />
+
+      <Button text="Submit" onClick={handleSubmit} />
+
+      <Table data={tableData} />
+    </Container>
+  );
 }
 
-export default App
+export default App;
